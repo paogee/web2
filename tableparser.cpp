@@ -78,10 +78,10 @@ char decode(const char* str) {	//decoding
 	char b = *(str + 1);	//2nd sym after%
 	char c; 
 	if (isalpha(a)) {  //if 1st symbol NOT num
-		c = (a - 'A' + 10) << 4;
+		c = (a - 'A' + 10) << 2;
 	}
 	else { //if 1st symbol num
-		c = (a - '0') << 4;
+		c = (a - '0') << 2;
 	}
 	if (isalpha(b)) {	//if 2nd symbol NOT num
 		c += (b - 'A' + 10);
